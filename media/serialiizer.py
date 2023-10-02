@@ -19,7 +19,8 @@ class  GalleryModelSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = GalleryModel
-        fields = ['tags', 'title', 'description', 'date_created']  
+        fields = ['tags', 'title', 'description', 'date_created', 'id']  
+        read_only_fields = ['id']
         
 class ImageSerializer(serializers.ModelSerializer):
     """serializer for uploading images to imagemodels"""
@@ -35,29 +36,34 @@ class ImageModelSerializer(serializers.ModelSerializer):
     image = ImageSerializer
     class Meta:
         model = ImageModel
-        fields = ['title', 'date_created', 'gallery', 'image']
+        fields = ['title', 'date_created', 'gallery', 'image', 'id']
+        read_only_fields = ['id']
 
 class EventSerializer(serializers.ModelSerializer):
     """serializers for event"""
     class Meta:
         model = Event
-        fields = ['title', 'date_started', 'date_ended', 'description', 'image']
+        fields = ['title', 'date_started', 'date_ended', 'description', 'image', 'id']
+        read_only_fields = ['id']
 
 class NewsSerializer(serializers.ModelSerializer):
     """serializers for News"""
     class Meta:
         model = News
-        fields = ['title', 'description', 'image', 'date']
+        fields = ['title', 'description', 'image', 'date', 'id']
+        read_only_fields = ['id']
         
         
 class ProgramsSerializers(serializers.ModelSerializer):
     """serializers for programms"""
     class Meta:
         model = Programs
-        fields = ['title', 'description', 'date']
+        fields = ['title', 'description', 'date', 'id']
+        read_only_fields = ['id']
         
 class AnnouncementSerielizer(serializers.ModelSerializer):
     """serializers for announcement"""
     class Meta:
         model = Anouncement
-        fields = ['title', 'description', 'date']
+        fields = ['title', 'description', 'date', 'id']
+        read_only_fields=['id']
