@@ -143,4 +143,4 @@ SPECTACULAR_SETTINGS={
     'COMPONENT_SPLIT_REQUEST':True,
 }
 
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+# STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
